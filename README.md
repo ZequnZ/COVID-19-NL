@@ -3,10 +3,10 @@ Collect and update the information of positively tested cases for the Coronaviru
 
 ## Data sources
 
-Coronavirus (COVID-19) messages](https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19#node-coronavirus-covid-19-meldingen) provided by RIVM
+[Coronavirus (COVID-19) messages](https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19#node-coronavirus-covid-19-meldingen) provided by RIVM
 
 The direct link to download the csv:
-`https://www.volksgezondheidenzorg.info/sites/default/files/map/detail_data/klik_corona{day}{month}{year}_rec.csv`
+`https://www.volksgezondheidenzorg.info/sites/default/files/map/detail_data/klik_corona{day}{month}{year}_rec_0.csv`
 
 ## TODO
 - [ ] Process the data with [the information of the Dutch municipalities](https://www.cbs.nl/-/media/_excel/2020/03/gemeenten%20alfabetisch%202020.xlsx)
