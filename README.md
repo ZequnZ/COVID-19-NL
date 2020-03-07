@@ -35,4 +35,6 @@ Just follow:
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgement
+Thanks [covid19-eu-data](https://github.com/covid19-eu-zh/covid19-eu-data) for inspiring me.
+
 Thanks Koelink for providing great data source in your [repo](https://github.com/Koelink/COVID-19-NLDATA) 
