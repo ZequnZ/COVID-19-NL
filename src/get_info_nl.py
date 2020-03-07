@@ -52,14 +52,16 @@ def save_info_nl(csv_link, csv_update_date):
     info_df = info_df[KEEP_COLs]
 
     # Make it consistent with the info of Dutch municipalities
-    info_df.rename(columns={"Aantal": "number", "id": "Gemeentecode"}, inplace=True)
+    info_df.rename(
+        columns={"Aantal": "Number", "id": "City_code", "Gemeente": "City"},
+        inplace=True,
+    )
 
     # if this column is string then transform it into integer
-    if info_df["Gemeentecode"].dtype != np.dtype("int64"):
-        info_df["Gemeentecode"] = info_df["Gemeentecode"].apply(
+    if info_df["City_code"].dtype != np.dtype("int64"):
+        info_df["City_code"] = info_df["City_code"].apply(
             lambda x: x if "," not in x else x.split(",")[0]
         )
 
     # Save the csv
     info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
-

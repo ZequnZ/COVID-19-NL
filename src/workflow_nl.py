@@ -9,4 +9,3 @@ if __name__ == "__main__":
     )
 
     save_info_nl(csv_link, csv_update_date)
-
