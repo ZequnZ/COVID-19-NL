@@ -61,5 +61,5 @@ def save_info_nl(csv_link, csv_update_date):
         )
 
     # Save the csv
-    info_df.to_csv(f"data/NL_{csv_update_date}.csv", index=False)
+    info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
 
