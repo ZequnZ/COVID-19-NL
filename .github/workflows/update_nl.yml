@@ -27,8 +27,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run workflow
         run: |
-          python src/workflow.py
-          ls dataset/daily/nl
+          python src/workflow_nl.py
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
