@@ -40,3 +40,4 @@ jobs:
         with:
           repository: ZequnZ/COVID-19-NL
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.head_ref }}
