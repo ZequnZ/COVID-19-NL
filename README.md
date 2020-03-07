@@ -25,7 +25,7 @@ Just follow:
 - [ ] Process the data with [the information of the Dutch municipalities](https://www.cbs.nl/-/media/_excel/2020/03/gemeenten%20alfabetisch%202020.xlsx)
 - [x] Save the data in the _data_ folder
 - [ ] Consider whether do the data aggregation
-- [ ] Create a Github workflow to update the data automatically
+- [x] Create a Github workflow to update the data automatically
 - [ ] Provide some visualizations
 
 ## Author
