@@ -1,79 +1,45 @@
-# This is a basic workflow to help you get started with Actions
+name: Daily update NL info
 
-name: CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-  #   branches: [dev-0.0.2]
-  # pull_request:
-  #   branches: [dev-0.0.2]
+    branches: [dev-0.0.2]
+  pull_request:
+    branches: [dev-0.0.2]
+  # schedule:
+  #   - cron: "11/1 * * * *"
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Checkout current repo
+        uses: actions/checkout@v2
+      - name: Get all files
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-# name: Daily update NL info
-
-# on:
-#   push:
-#     branches: [dev-0.0.2]
-#   pull_request:
-#     branches: [dev-0.0.2]
-#   # schedule:
-#   #   - cron: "11/1 * * * *"
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout current repo
-#         uses: actions/checkout@v2
-#       - name: Get all files
-#         run: |
-#           pwd
-#           ls
-#       # - uses: actions/setup-python@v1
-#       #   with:
-#       #     python-version: '3.8' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-#       #     architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-#       # - name: Install Python Requirements
-#       #   run: |
-#       #     python --version
-#       #     pip install -r scripts/requirements.txt
-#       # - name: Download Records
-#       #   run: |
-#       #     python scripts/download_nl.py
-#       #     ls dataset/daily/nl
-#       #     git config --local user.email "action@github.com"
-#       #     git config --local user.name "GitHub Action"
-#       #     git pull
-#       #     git status
-#       #     git add .
-#       #     git commit -m "Update NL Dataset" || echo "Nothing to update"
-#       #     git status
-#       # - name: Push changes
-#       #   uses: ad-m/github-push-action@master
-#       #   with:
-#       #     repository: covid19-eu-zh/covid19-eu-data
-#       #     github_token: ${{ secrets.GITHUB_TOKEN }}
+          pwd
+          ls
+      - uses: actions/setup-python@v1
+        with:
+          python-version: "3.8" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
+      - name: Install Python Requirements
+        run: |
+          python --version
+          pip install -r requirements.txt
+      - name: Run workflow
+        run: |
+          python src/workflow.py
+          ls dataset/daily/nl
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          git status
+          git add .
+          git commit -m "Update NL Dataset" || echo "Nothing to update"
+          git status
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          repository: ZequnZ/COVID-19-NL
+          github_token: ${{ secrets.GITHUB_TOKEN }}
