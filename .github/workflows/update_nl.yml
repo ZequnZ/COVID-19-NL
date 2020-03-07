@@ -2,9 +2,11 @@ name: Daily update NL info
 
 on:
   push:
+    branches: [master]
+  pull_request:
     branches: [dev-0.0.2]
-  # schedule:
-  #   - cron: "11/1 * * * *"
+  schedule:
+    - cron: "0 9/3 * * *"
 
 jobs:
   build:
