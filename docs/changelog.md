@@ -2,7 +2,20 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-Current version [0.0.2] - 2020-03-07
+Current version [0.0.3] - 2020-03-08
+
+### Added
+
+- Enrich the daily data with the Dutch municipalities information
+    - Add a column 'Province' in the saved csv file
+    - Add a row listing the sum of infected number
+ - Add the history data (2020-03-03 - 2020-03-05)
+
+### Changed
+
+ - Changed all the saved csv files into new format
+
+## [0.0.2] - 2020-03-07
 
 ### Added
 
