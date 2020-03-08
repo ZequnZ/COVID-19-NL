@@ -134,5 +134,5 @@ dmypy.json
 # Notebook folder
 notebook/*
 
-data/Gemeenten_alfabetisch_2020.csv
+# data/Gemeenten_alfabetisch_2020.csv
 
