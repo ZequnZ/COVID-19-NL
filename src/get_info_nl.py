@@ -32,6 +32,10 @@ def get_coronavirus_info_nl(info_link):
     # now = datetime.now()
     # current_time = now.strftime("%H:%M:%S")
 
+    # Print the result
+    print(f"csv link:{csv_link}")
+    print(f"csv update date:{csv_update_date}")
+
     return csv_link, csv_update_date
 
 
@@ -62,6 +66,24 @@ def save_info_nl(csv_link, csv_update_date):
         info_df["City_code"] = info_df["City_code"].apply(
             lambda x: x if "," not in x else x.split(",")[0]
         )
+
+    # Add the Province column
+    dutch_info = pd.read_csv("./data/Dutch_municipalities_2020.csv")
+    KEEP = ["Province", "City"]
+    dutch_info = dutch_info[KEEP]
+    info_df = info_df.merge(dutch_info, on="City", how="inner")
+
+    info_df = info_df.reindex(
+        columns=[col for col in info_df.columns if col != "Number"] + ["Number"]
+    )
+
+    # Add a row listing the total number
+    info_df = info_df.append(
+        pd.DataFrame(
+            [["", "SUM", "SUM", sum(info_df["Number"])]], columns=list(info_df.columns)
+        )
+    )
+    info_df.reset_index(drop=True, inplace=True)
 
     # Save the csv
     info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
