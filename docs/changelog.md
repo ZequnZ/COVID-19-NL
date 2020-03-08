@@ -9,7 +9,7 @@ Current version [0.0.3] - 2020-03-08
 - Enrich the daily data with the Dutch municipalities information
     - Add a column 'Province' in the saved csv file
     - Add a row listing the sum of infected number
- - Add the history data (2020-03-03 - 2020-03-05)
+ - Add the history data (2020-02-27 - 2020-03-05)
 
 ### Changed
 

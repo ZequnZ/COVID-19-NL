@@ -20,7 +20,7 @@ Just follow:
 1. Build a Docker container with the _Dockerfile_: `docker build -t ZequnZ/py-docker:0.0.5 .`
 2. Run the container and get the containerID, here you have different options:
    - Just want to run the script: `docker run -itd -v $(pwd)/data:/app/data ZequnZ/py-docker:0.0.5 python src/workflow.nl`
-   - Also run the jupyter notebook to play with the codes: `docker run -itd -p 8990:8990 -v $(pwd)/notebook:/app/notebook zequnz/py-docker:0.0.5`
+   - Also run the jupyter notebook to play with the codes: `docker run -itd -p 8990:8990 -v $(pwd):/app zequnz/py-docker:0.0.5`
 3. (Optional) To start the notebook, you need to go into the container: `docker exec -it <containerID> bash`
 4. (Optional) Start the notebook: `jupyter notebook --ip 0.0.0.0 --port 8990 --no-browser --allow-root`
 
