@@ -5,7 +5,7 @@ City_code,City,Province,Number
 484,Alphen aan den Rijn,Zuid-Holland,1.0
 1959,Altena,Noord-Brabant,4.0
 362,Amstelveen,Noord-Holland,1.0
-363,Amsterdam,Noord-Holland,6.0
+363,Amsterdam,Noord-Holland,4.0
 202,Arnhem,Gelderland,3.0
 1954,Beekdaelen,Limburg,2.0
 748,Bergen op Zoom,Noord-Brabant,1.0
@@ -24,9 +24,9 @@ City_code,City,Province,Number
 310,De Bilt,Utrecht,6.0
 503,Delft,Zuid-Holland,1.0
 762,Deurne,Noord-Brabant,1.0
+384,Diemen,Noord-Holland,2.0
 1774,Dinkelland,Overijssel,2.0
 766,Dongen,Noord-Brabant,3.0
-228,Ede,Gelderland,1.0
 772,Eindhoven,Noord-Brabant,6.0
 114,Emmen,Drenthe,1.0
 1652,Gemert-Bakel,Noord-Brabant,1.0
@@ -43,7 +43,7 @@ City_code,City,Province,Number
 406,Huizen,Noord-Holland,1.0
 353,IJsselstein,Utrecht,1.0
 1931,Krimpenerwaard,Zuid-Holland,1.0
-1685,Landerd,Noord-Brabant,1.0
+1685,Landerd,Noord-Brabant,2.0
 1621,Lansingerland,Zuid-Holland,2.0
 1916,Leidschendam-Voorburg,Zuid-Holland,1.0
 1705,Lingewaard,Gelderland,2.0
@@ -60,7 +60,7 @@ City_code,City,Province,Number
 597,Ridderkerk,Zuid-Holland,1.0
 957,Roermond,Limburg,1.0
 599,Rotterdam,Zuid-Holland,14.0
-1676,Schouwen-Duiveland,Zeeland,2.0
+1676,Schouwen-Duiveland,Zeeland,1.0
 518,'s-Gravenhage,Zuid-Holland,2.0
 796,'s-Hertogenbosch,Noord-Brabant,2.0
 965,Simpelveld,Limburg,2.0
@@ -88,4 +88,4 @@ City_code,City,Province,Number
 355,Zeist,Utrecht,1.0
 879,Zundert,Noord-Brabant,1.0
 193,Zwolle,Overijssel,1.0
-,SUM,SUM,264.0
+,SUM,SUM,263.0
