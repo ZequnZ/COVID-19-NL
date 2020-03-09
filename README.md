@@ -2,7 +2,7 @@
 
 Collect and update the information of positively tested cases for the Coronavirus in the Netherlands.
 
-The data can be updated automatically and stored in _data_ folder.
+The data is updated automatically and stored in _data_ folder.
 
 ## Data sources
 
@@ -30,6 +30,8 @@ Just follow:
 - [x] Create a Github workflow to update the data automatically
 - [x] Process the data with [the information of the Dutch municipalities](https://www.cbs.nl/-/media/_excel/2020/03/gemeenten%20alfabetisch%202020.xlsx)
 - [ ] Data aggregation
+  - [ ] City-based data
+  - [ ] Province-based data
 - [ ] Provide some visualizations
 
 ## Author
