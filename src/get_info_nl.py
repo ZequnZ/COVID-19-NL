@@ -119,7 +119,15 @@ def get_coronavirus_info_nl_v2(info_link):
     soup_pattern = soup(coronavirus_info_page, features="lxml")
 
     csv_info_class = soup_pattern.find("div", {"id": "csvData"})
-    return csv_info_class.string
+    csv_raw_str = csv_info_class.string
+
+    # There is one extra column in the string
+    # The usage for now is unknown
+    # Before understanding it, just discard it
+    csv_str = ""
+    for line in csv_raw_str.split("\n"):
+        csv_str += ";".join(line.split(";")[0:3]) + "\n"
+    return csv_str
 
 
 def save_info_nl_v2(csv_str):
