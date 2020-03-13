@@ -9,11 +9,29 @@ from bs4 import BeautifulSoup as soup
 
 
 RIVM_INFO_PAGE = "https://www.volksgezondheidenzorg.info"
+DUTCH_MONTH = {
+    "januari": "01",
+    "februari": "02",
+    "maart": "03",
+    "april": "04",
+    "mei": "05",
+    "juni": "06",
+    "juli": "07",
+    "augustus": "08",
+    "september": "09",
+    "oktober": "10",
+    "november": "11",
+    "december": "12",
+}
+YEAR = "2020"
 
 
 def get_coronavirus_info_nl(info_link):
     """
     Get the coronavirus information from RIVM website.
+    @return:
+    csv_link: str, The csv download link
+    csv_update_date: str, The date at which csv is updated
     """
     coronavirus_info_page = urlopen(info_link).read().decode("utf-8")
     soup_pattern = soup(coronavirus_info_page, features="lxml")
@@ -76,6 +94,80 @@ def save_info_nl(csv_link, csv_update_date):
     info_df = info_df.reindex(
         columns=[col for col in info_df.columns if col != "Number"] + ["Number"]
     )
+
+    # Add a row listing the total number
+    info_df = info_df.append(
+        pd.DataFrame(
+            [["", "SUM", "SUM", sum(info_df["Number"])]], columns=list(info_df.columns)
+        )
+    )
+    info_df.reset_index(drop=True, inplace=True)
+
+    # Save the csv
+    info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
+
+
+def get_coronavirus_info_nl_v2(info_link):
+    """
+    Get the coronavirus information from RIVM website version 2
+    Due to the fact that the info page is updated
+    @return:
+    csv_str: str, The csv info string
+    """
+
+    coronavirus_info_page = urlopen(info_link).read().decode("utf-8")
+    soup_pattern = soup(coronavirus_info_page, features="lxml")
+
+    csv_info_class = soup_pattern.find("div", {"id": "csvData"})
+    return csv_info_class.string
+
+
+def save_info_nl_v2(csv_str):
+    """
+    Preprocess the data and save it as a csv file version 2
+    """
+
+    info_df = pd.read_csv(StringIO(csv_str), sep=";")
+
+    # Rename the df
+    info_df.rename(
+        columns={"Aantal": "Number", "Gemeente": "City", "Gemnr": "City_code"},
+        inplace=True,
+    )
+
+    # Get the update date
+    date_string = info_df[info_df["City_code"] == -2]["City"].values[0]
+    time_info = date_string.split(" ")
+    month = DUTCH_MONTH.get(time_info[2])
+    day = time_info[1]
+    csv_update_date = YEAR + month + day
+    print(f"csv update date:{csv_update_date}")
+
+    # Translate the row about the number of patient with missing postcode or living abroad
+    # into English
+    inx = info_df[info_df["City_code"] == -1].index
+    info_df.loc[inx, "City"] = "missing postcode and abroad"
+    info_df.loc[inx, "City_code"] = ""
+
+    # Delete useless info
+    info_df.dropna(axis=0, inplace=True)
+
+    # Change the order of columns
+    info_df = info_df.reindex(
+        columns=["City_code"] + [col for col in info_df.columns if col != "City_code"]
+    )
+
+    # Add the Province column
+    dutch_info = pd.read_csv("./data/Dutch_municipalities_2020.csv")
+    KEEP = ["Province", "City_code"]
+    dutch_info = dutch_info[KEEP]
+    info_df = info_df.merge(dutch_info, on="City_code", how="left")
+
+    # Change the order of columns
+    info_df = info_df.reindex(
+        columns=[col for col in info_df.columns if col != "Number"] + ["Number"]
+    )
+    info_df = info_df.fillna("")
 
     # Add a row listing the total number
     info_df = info_df.append(
