@@ -7,6 +7,7 @@ Current version [0.0.4] - 2020-03-13
 ### Added
 
 - Function to get the csv info
+- Preprocess the csv_str: discard the last column
 - Function to process and save the data
 - History data (2020-03-12) as the workflow was broken at that day
 
@@ -19,13 +20,13 @@ Current version [0.0.4] - 2020-03-13
 ### Added
 
 - Enrich the daily data with the Dutch municipalities information
-    - Add a column 'Province' in the saved csv file
-    - Add a row listing the sum of infected number
- - Add the history data (2020-02-27 - 2020-03-05)
+  - Add a column 'Province' in the saved csv file
+  - Add a row listing the sum of infected number
+- Add the history data (2020-02-27 - 2020-03-05)
 
 ### Changed
 
- - Changed all the saved csv files into new format
+- Changed all the saved csv files into new format
 
 ## [0.0.2] - 2020-03-07
 
