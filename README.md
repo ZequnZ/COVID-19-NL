@@ -27,11 +27,10 @@ Just follow:
 ## TODO
 - [x] Process the data with [the information of the Dutch municipalities](https://www.cbs.nl/-/media/_excel/2020/03/gemeenten%20alfabetisch%202020.xlsx)
 - [x] Save the data in the _data_ folder
-- [ ] Data aggregation
 - [x] Create a Github workflow to update the data automatically
-- [ ] Data aggregation
-  - [ ] City-based data
-  - [ ] Province-based data
+- [x] Data aggregation
+  - [x] City-based data
+  - [x] Province-based data
 - [ ] Provide some visualizations
 
 ## Author

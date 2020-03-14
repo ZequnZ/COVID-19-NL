@@ -1,6 +1,7 @@
 """Workflow to obtain and save the data"""
 
 from get_info_nl import get_coronavirus_info_nl_v2, save_info_nl_v2, RIVM_INFO_PAGE
+from utils import agg_covid19_info_city, agg_covid19_info_province
 
 if __name__ == "__main__":
 
@@ -23,3 +24,5 @@ if __name__ == "__main__":
     )
     save_info_nl_v2(csv_str)
 
+    agg_covid19_info_city()
+    agg_covid19_info_province()
