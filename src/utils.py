@@ -43,7 +43,7 @@ def agg_covid19_info_city(path=f"./data"):
     res = res.reindex(columns=["City"] + sorted(csv_dict))
     res = res.fillna(0)
 
-    res.to_csv(f".data/NL_COVID19_info_city.csv", index=False)
+    res.to_csv(f"./data/NL_COVID19_info_city.csv", index=False)
     print(f"Successfully update and aggregate the city level data")
 
 
@@ -98,5 +98,5 @@ def agg_covid19_info_province(path=f"./data"):
         + [res[res.Province == "SUM"].index[0]]
     )
 
-    res.to_csv(f".data/NL_COVID19_info_province.csv", index=False)
+    res.to_csv(f"./data/NL_COVID19_info_province.csv", index=False)
     print(f"Successfully update and aggregate the province level data")
