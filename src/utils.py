@@ -14,7 +14,7 @@ def agg_covid19_info_city(path=f"./data"):
     csv_dict = {}
     with os.scandir(path) as files:
         for f in files:
-            if f.name.startswith("NL") and f.name.endswith(".csv"):
+            if f.name.startswith("NL_2020") and f.name.endswith(".csv"):
                 csv_dict[re.findall(r"[0-9]{8}", f.name)[0]] = f.name
 
     # We can see that newer info contains more cities as the virus keeps spreading
@@ -49,7 +49,7 @@ def agg_covid19_info_city(path=f"./data"):
 
 def agg_covid19_info_province(path=f"./data"):
     """
-    Aggregate the data based on each city
+    Aggregate the data based on each province
     """
 
     # Get all daily info csv files
@@ -57,7 +57,7 @@ def agg_covid19_info_province(path=f"./data"):
     csv_dict = {}
     with os.scandir(path) as files:
         for f in files:
-            if f.name.startswith("NL") and f.name.endswith(".csv"):
+            if f.name.startswith("NL_2020") and f.name.endswith(".csv"):
                 csv_dict[re.findall(r"[0-9]{8}", f.name)[0]] = f.name
 
     # We can see that newer info contains more cities as the virus keeps spreading
