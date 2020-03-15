@@ -8,7 +8,8 @@ The data is updated automatically and stored in _data_ folder.
 
 [Coronavirus (COVID-19) messages](https://www.volksgezondheidenzorg.info/onderwerp/infectieziekten/regionaal-internationaal/coronavirus-covid-19#node-coronavirus-covid-19-meldingen) provided by RIVM
 
-The direct link to download the csv: **(Not always correct)**
+**(Does not work anymore)**  
+The direct link to download the csv: 
 `https://www.volksgezondheidenzorg.info/sites/default/files/map/detail_data/klik_corona{day}{month}{year}_rec_0.csv`
 
 ## Docker supported
