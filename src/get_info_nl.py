@@ -171,6 +171,10 @@ def save_info_nl_v2(csv_str):
     dutch_info = dutch_info[KEEP]
     info_df = info_df.merge(dutch_info, on="City_code", how="left")
 
+    # Fill up the column province for the aggreration
+    inx = info_df[info_df["City"] == "missing postcode and abroad"].index
+    info_df.loc[inx, "Province"] = "missing postcode and abroad"
+
     # Change the order of columns
     info_df = info_df.reindex(
         columns=[col for col in info_df.columns if col != "Number"] + ["Number"]
