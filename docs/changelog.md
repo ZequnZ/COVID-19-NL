@@ -2,9 +2,16 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-Current version [0.0.5] - 2020-03-14
+Current version [0.0.6] - 2020-03-14
 
-## Added
+### Changed
+
+- Get_info function: Due the website is updated, I need to modify the function to make it works agagin
+- Save_info function: Same reason
+
+## [0.0.5] - 2020-03-14
+
+### Added
 
 - Aggregation functions to generate the info in a city-level and province-level
 - Do the aggregation after getting the data from RIVM page
