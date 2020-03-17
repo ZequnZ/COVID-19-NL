@@ -107,6 +107,9 @@ def save_info_nl(csv_link, csv_update_date):
     info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
 
 
+# Updated at 2020-03-13
+
+
 def get_coronavirus_info_nl_v2(info_link):
     """
     Get the coronavirus information from RIVM website version 2
@@ -150,6 +153,95 @@ def save_info_nl_v2(csv_str):
     day = time_info[1]
     csv_update_date = YEAR + month + day
     print(f"csv update date:{csv_update_date}")
+
+    # Translate the row about the number of patient with missing postcode or living abroad
+    # into English
+    inx = info_df[info_df["City_code"] == -1].index
+    info_df.loc[inx, "City"] = "missing postcode and abroad"
+    info_df.loc[inx, "City_code"] = ""
+
+    # Delete useless info
+    info_df.dropna(axis=0, inplace=True)
+
+    # Change the order of columns
+    info_df = info_df.reindex(
+        columns=["City_code"] + [col for col in info_df.columns if col != "City_code"]
+    )
+
+    # Add the Province column
+    dutch_info = pd.read_csv("./data/Dutch_municipalities_2020.csv")
+    KEEP = ["Province", "City_code"]
+    dutch_info = dutch_info[KEEP]
+    info_df = info_df.merge(dutch_info, on="City_code", how="left")
+
+    # Fill up the column province for the aggreration
+    inx = info_df[info_df["City"] == "missing postcode and abroad"].index
+    info_df.loc[inx, "Province"] = "missing postcode and abroad"
+
+    # Change the order of columns
+    info_df = info_df.reindex(
+        columns=[col for col in info_df.columns if col != "Number"] + ["Number"]
+    )
+    info_df = info_df.fillna("")
+
+    # Add a row listing the total number
+    info_df = info_df.append(
+        pd.DataFrame(
+            [["", "SUM", "SUM", sum(info_df["Number"])]], columns=list(info_df.columns)
+        )
+    )
+    info_df.reset_index(drop=True, inplace=True)
+
+    # Save the csv
+    info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
+
+
+# Updated at 2020-03-17
+
+
+def get_coronavirus_info_nl_v3(info_link):
+    """
+    Get the coronavirus information from RIVM website version 3
+    Due to the fact that the info page is updated
+    @return:
+    csv_str: str, The csv info string
+    """
+
+    coronavirus_info_page = urlopen(info_link).read().decode("utf-8")
+    soup_pattern = soup(coronavirus_info_page, features="lxml")
+
+    date_string = soup_pattern.find("p").string
+    date_string = date_string.replace("\xa0", " ")
+    time_info = date_string.split(" ")
+    year = time_info[4]
+    month = DUTCH_MONTH.get(time_info[3])
+    day = time_info[2]
+    csv_update_date = year + month + day
+
+    csv_info_class = soup_pattern.find("div", {"id": "csvData"})
+    csv_str = csv_info_class.string
+    print(f"csv update date:{csv_update_date}")
+
+    return csv_str, csv_update_date
+
+
+def save_info_nl_v3(csv_str, csv_update_date):
+    """
+    Preprocess the data and save it as a csv file version 3
+    The info from the website is updated at 2020-03-16, which contains 5 columns.
+    For now I just keep the format consistent.
+    I will think about to change it later.
+    """
+
+    KEEP_COL = ["Gemnr", "Gemeente", "Aantal"]
+    info_df = pd.read_csv(StringIO(csv_str), sep=";")
+    info_df = info_df[KEEP_COL]
+
+    # Rename the df
+    info_df.rename(
+        columns={"Aantal": "Number", "Gemeente": "City", "Gemnr": "City_code"},
+        inplace=True,
+    )
 
     # Translate the row about the number of patient with missing postcode or living abroad
     # into English
