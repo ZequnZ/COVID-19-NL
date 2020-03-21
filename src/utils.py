@@ -136,8 +136,11 @@ def gen_p_graphs(df_path, threshold=200):
     plt.grid(color="grey", linestyle="--", linewidth=0.5, which="both")
     plt.xlabel("Date", fontsize=16)
     plt.ylabel("Number of infected", fontsize=16)
+    cur_time = (datetime.datetime.now() + datetime.timedelta(hours=1)).strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
     plt.title(
-        f"Number of infected cases in different provinces of NL\n updated at {datetime.datetime.now()}",
+        f"Number of infected cases in different provinces of NL\n updated at {cur_time} (UTC+1)",
         fontsize=20,
     )
     plt.savefig(f"./imgs/num_all_province.png")
@@ -154,7 +157,7 @@ def gen_p_graphs(df_path, threshold=200):
     plt.xlabel("Date", fontsize=16)
     plt.ylabel("Number of infected", fontsize=16)
     plt.title(
-        f"Number of infected cases(less than {threshold}) in different provinces of NL\n updated at {datetime.datetime.now()}",
+        f"Number of infected cases(less than {threshold}) in different provinces of NL\n updated at {cur_time} (UTC+1)",
         fontsize=20,
     )
     plt.ylim(bottom=0, top=threshold)
@@ -169,7 +172,7 @@ def gen_c_graphs(df_path, top=10):
     """
     df = viz_preprocessing(df_path)
     c = df.iloc[-1, 1:]
-    cols = list(c.sort_values(ascending=False).index)[1:1 + top]
+    cols = list(c.sort_values(ascending=False).index)[1 : 1 + top]
     colors = sns.color_palette("bright", len(cols))
     plt.figure(figsize=(16, 9))
     for i, c in enumerate(cols):
@@ -178,8 +181,11 @@ def gen_c_graphs(df_path, top=10):
     plt.grid(color="grey", linestyle="--", linewidth=0.5, which="both")
     plt.xlabel("Date", fontsize=16)
     plt.ylabel("Number of infected", fontsize=16)
+    cur_time = (datetime.datetime.now() + datetime.timedelta(hours=1)).strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
     plt.title(
-        f"Top {top} number of infected cases in cities of NL\n updated at {datetime.datetime.now()}",
+        f"Top {top} number of infected cases in cities of NL\n updated at {cur_time} (UTC+1)",
         fontsize=20,
     )
     plt.savefig(f"./imgs/num_top_cities.png")
