@@ -1,7 +1,12 @@
 """Workflow to obtain and save the data"""
 
 from get_info_nl import get_coronavirus_info_nl_v3, save_info_nl_v3, RIVM_INFO_PAGE
-from utils import agg_covid19_info_city, agg_covid19_info_province
+from utils import (
+    agg_covid19_info_city,
+    agg_covid19_info_province,
+    gen_p_graphs,
+    gen_c_graphs,
+)
 
 if __name__ == "__main__":
 
@@ -26,3 +31,6 @@ if __name__ == "__main__":
 
     agg_covid19_info_city()
     agg_covid19_info_province()
+
+    gen_p_graphs(f"./data/NL_COVID19_info_province.csv")
+    gen_c_graphs(f"./data/NL_COVID19_info_city.csv")

@@ -1,7 +1,10 @@
 """ Utils function """
 import os
 import re
+import datetime
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 
 def agg_covid19_info_city(path=f"./data"):
@@ -100,3 +103,85 @@ def agg_covid19_info_province(path=f"./data"):
 
     res.to_csv(f"./data/NL_COVID19_info_province.csv", index=False)
     print(f"Successfully update and aggregate the province level data")
+
+
+def viz_preprocessing(df_path):
+    """
+    Preprocess the aggregation csv into a good format for visualization
+    """
+    df = pd.read_csv(df_path)
+    res = df.T
+    res = res.rename(columns=res.iloc[0]).drop(res.index[0])
+    res = res.astype("int64")
+    res.reset_index(inplace=True)
+    res["index"] = res["index"].apply(
+        lambda x: "{}-{}-{}".format(x[0:4], x[4:6], x[6:])
+    )
+    res["index"] = pd.to_datetime(res["index"])
+    return res
+
+
+def gen_p_graphs(df_path, threshold=200):
+    """
+    Generate graphs to show the number of infected in different NL provinces
+    """
+    df = viz_preprocessing(df_path)
+
+    cols = list(df.columns)[1:-1]
+    colors = sns.color_palette("bright", len(cols))
+    plt.figure(figsize=(16, 9))
+    for i, c in enumerate(cols):
+        sns.lineplot(x="index", y=c, data=df, label=c, linewidth=1.5, color=colors[i])
+
+    plt.grid(color="grey", linestyle="--", linewidth=0.5, which="both")
+    plt.xlabel("Date", fontsize=16)
+    plt.ylabel("Number of infected", fontsize=16)
+    plt.title(
+        f"Number of infected cases in different provinces of NL\n updated at {datetime.datetime.now()}",
+        fontsize=20,
+    )
+    plt.savefig(f"./imgs/num_all_province.png")
+    # plt.show()
+
+    col2 = df.iloc[-1, 1:] < threshold
+    col2 = list(col2[col2].index)
+    colors = sns.color_palette("Set2", len(col2))
+    plt.figure(figsize=(16, 9))
+    for i, c in enumerate(col2):
+        sns.lineplot(x="index", y=c, data=df, label=c, linewidth=3, color=colors[i])
+
+    plt.grid(color="grey", linestyle="--", linewidth=0.5, which="both")
+    plt.xlabel("Date", fontsize=16)
+    plt.ylabel("Number of infected", fontsize=16)
+    plt.title(
+        f"Number of infected cases(less than {threshold}) in different provinces of NL\n updated at {datetime.datetime.now()}",
+        fontsize=20,
+    )
+    plt.ylim(bottom=0, top=threshold)
+    plt.savefig(f"./imgs/num_sub_province.png")
+    # plt.show()
+    print(f"Successfully generate graphs about province.")
+
+
+def gen_c_graphs(df_path, top=10):
+    """
+    Generate graphs to show the top number of infected in NL cities.
+    """
+    df = viz_preprocessing(df_path)
+    c = df.iloc[-1, 1:]
+    cols = list(c.sort_values(ascending=False).index)[1:1 + top]
+    colors = sns.color_palette("bright", len(cols))
+    plt.figure(figsize=(16, 9))
+    for i, c in enumerate(cols):
+        sns.lineplot(x="index", y=c, data=df, label=c, linewidth=2, color=colors[i])
+
+    plt.grid(color="grey", linestyle="--", linewidth=0.5, which="both")
+    plt.xlabel("Date", fontsize=16)
+    plt.ylabel("Number of infected", fontsize=16)
+    plt.title(
+        f"Top {top} number of infected cases in cities of NL\n updated at {datetime.datetime.now()}",
+        fontsize=20,
+    )
+    plt.savefig(f"./imgs/num_top_cities.png")
+    # plt.show()
+    print(f"Successfully generate graphs about city.")
