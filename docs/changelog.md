@@ -2,7 +2,13 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-Current version [0.0.6] - 2020-03-14
+## Current version [0.0.7] - 2020-03-21
+
+### Added
+
+ - Functions to generate lineplots to show the number of infected of different provinces and cities
+
+## [0.0.6] - 2020-03-14
 
 ### Changed
 
