@@ -1,0 +1,358 @@
+City_code,City,Province,Number
+,missing postcode and abroad,missing postcode and abroad,99
+518,'s-Gravenhage,Zuid-Holland,63
+796,'s-Hertogenbosch,Noord-Brabant,67
+1680,Aa en Hunze,Drenthe,1
+358,Aalsmeer,Noord-Holland,9
+197,Aalten,Gelderland,1
+59,Achtkarspelen,Friesland,0
+482,Alblasserdam,Zuid-Holland,4
+613,Albrandswaard,Zuid-Holland,18
+361,Alkmaar,Noord-Holland,20
+141,Almelo,Overijssel,8
+34,Almere,Flevoland,21
+484,Alphen aan den Rijn,Zuid-Holland,20
+1723,Alphen-Chaam,Noord-Brabant,15
+1959,Altena,Noord-Brabant,28
+60,Ameland,Friesland,0
+307,Amersfoort,Utrecht,44
+362,Amstelveen,Noord-Holland,33
+363,Amsterdam,Noord-Holland,250
+200,Apeldoorn,Gelderland,29
+3,Appingedam,Groningen,0
+202,Arnhem,Gelderland,23
+106,Assen,Drenthe,5
+743,Asten,Noord-Brabant,6
+744,Baarle-Nassau,Noord-Brabant,1
+308,Baarn,Utrecht,2
+489,Barendrecht,Zuid-Holland,15
+203,Barneveld,Gelderland,12
+888,Beek,Limburg,9
+1954,Beekdaelen,Limburg,29
+370,Beemster,Noord-Holland,1
+889,Beesel,Limburg,6
+1945,Berg en Dal,Gelderland,35
+1724,Bergeijk,Noord-Brabant,5
+893,Bergen (L),Limburg,1
+373,Bergen (NH),Noord-Holland,12
+748,Bergen op Zoom,Noord-Brabant,12
+1859,Berkelland,Gelderland,2
+1721,Bernheze,Noord-Brabant,67
+753,Best,Noord-Brabant,17
+209,Beuningen,Gelderland,13
+375,Beverwijk,Noord-Holland,11
+1728,Bladel,Noord-Brabant,14
+376,Blaricum,Noord-Holland,4
+377,Bloemendaal,Noord-Holland,13
+1901,Bodegraven-Reeuwijk,Zuid-Holland,5
+755,Boekel,Noord-Brabant,42
+1681,Borger-Odoorn,Drenthe,0
+147,Borne,Overijssel,8
+654,Borsele,Zeeland,4
+756,Boxmeer,Noord-Brabant,9
+757,Boxtel,Noord-Brabant,15
+758,Breda,Noord-Brabant,167
+501,Brielle,Zuid-Holland,1
+1876,Bronckhorst,Gelderland,7
+213,Brummen,Gelderland,4
+899,Brunssum,Limburg,17
+312,Bunnik,Utrecht,6
+313,Bunschoten,Utrecht,1
+214,Buren,Gelderland,6
+502,Capelle aan den IJssel,Zuid-Holland,13
+383,Castricum,Noord-Holland,10
+109,Coevorden,Drenthe,15
+1706,Cranendonck,Noord-Brabant,23
+1684,Cuijk,Noord-Brabant,6
+216,Culemborg,Gelderland,8
+148,Dalfsen,Overijssel,11
+1891,Dantumadiel,Friesland,0
+310,De Bilt,Utrecht,27
+1940,De Fryske Marren,Friesland,8
+736,De Ronde Venen,Utrecht,8
+1690,De Wolden,Drenthe,3
+503,Delft,Zuid-Holland,17
+10,Delfzijl,Groningen,1
+400,Den Helder,Noord-Holland,5
+762,Deurne,Noord-Brabant,25
+150,Deventer,Overijssel,20
+384,Diemen,Noord-Holland,4
+1774,Dinkelland,Overijssel,17
+221,Doesburg,Gelderland,4
+222,Doetinchem,Gelderland,8
+766,Dongen,Noord-Brabant,4
+505,Dordrecht,Zuid-Holland,23
+498,Drechterland,Noord-Holland,3
+1719,Drimmelen,Noord-Brabant,17
+303,Dronten,Flevoland,11
+225,Druten,Gelderland,6
+226,Duiven,Gelderland,2
+1711,Echt-Susteren,Limburg,15
+385,Edam-Volendam,Noord-Holland,7
+228,Ede,Gelderland,22
+317,Eemnes,Utrecht,1
+770,Eersel,Noord-Brabant,13
+1903,Eijsden-Margraten,Limburg,15
+772,Eindhoven,Noord-Brabant,68
+230,Elburg,Gelderland,4
+114,Emmen,Drenthe,7
+388,Enkhuizen,Noord-Holland,10
+153,Enschede,Overijssel,20
+232,Epe,Gelderland,13
+233,Ermelo,Gelderland,14
+777,Etten-Leur,Noord-Brabant,24
+779,Geertruidenberg,Noord-Brabant,10
+1771,Geldrop-Mierlo,Noord-Brabant,9
+1652,Gemert-Bakel,Noord-Brabant,64
+907,Gennep,Limburg,7
+784,Gilze en Rijen,Noord-Brabant,16
+1924,Goeree-Overflakkee,Zuid-Holland,43
+664,Goes,Zeeland,4
+785,Goirle,Noord-Brabant,16
+1942,Gooise Meren,Noord-Holland,12
+512,Gorinchem,Zuid-Holland,4
+513,Gouda,Zuid-Holland,17
+786,Grave,Noord-Brabant,11
+14,Groningen,Groningen,53
+1729,Gulpen-Wittem,Limburg,4
+158,Haaksbergen,Overijssel,3
+788,Haaren,Noord-Brabant,12
+392,Haarlem,Noord-Holland,41
+394,Haarlemmermeer,Noord-Holland,23
+1655,Halderberge,Noord-Brabant,8
+160,Hardenberg,Overijssel,6
+243,Harderwijk,Gelderland,9
+523,Hardinxveld-Giessendam,Zuid-Holland,6
+72,Harlingen,Friesland,3
+244,Hattem,Gelderland,2
+396,Heemskerk,Noord-Holland,7
+397,Heemstede,Noord-Holland,16
+246,Heerde,Gelderland,15
+74,Heerenveen,Friesland,3
+398,Heerhugowaard,Noord-Holland,15
+917,Heerlen,Limburg,46
+1658,Heeze-Leende,Noord-Brabant,7
+399,Heiloo,Noord-Holland,8
+163,Hellendoorn,Overijssel,6
+530,Hellevoetsluis,Zuid-Holland,5
+794,Helmond,Noord-Brabant,55
+531,Hendrik-Ido-Ambacht,Zuid-Holland,2
+164,Hengelo (O),Overijssel,16
+1966,Het Hogeland,Groningen,1
+252,Heumen,Gelderland,11
+797,Heusden,Noord-Brabant,19
+534,Hillegom,Zuid-Holland,3
+798,Hilvarenbeek,Noord-Brabant,8
+402,Hilversum,Noord-Holland,7
+1963,Hoeksche Waard,Zuid-Holland,31
+1735,Hof van Twente,Overijssel,5
+1911,Hollands Kroon,Noord-Holland,10
+118,Hoogeveen,Drenthe,6
+405,Hoorn,Noord-Holland,12
+1507,Horst aan de Maas,Limburg,17
+321,Houten,Utrecht,29
+406,Huizen,Noord-Holland,3
+677,Hulst,Zeeland,0
+353,IJsselstein,Utrecht,16
+1884,Kaag en Braassem,Zuid-Holland,4
+166,Kampen,Overijssel,20
+678,Kapelle,Zeeland,2
+537,Katwijk,Zuid-Holland,6
+928,Kerkrade,Limburg,17
+1598,Koggenland,Noord-Holland,4
+542,Krimpen aan den IJssel,Zuid-Holland,3
+1931,Krimpenerwaard,Zuid-Holland,12
+1659,Laarbeek,Noord-Brabant,17
+1685,Landerd,Noord-Brabant,25
+882,Landgraaf,Limburg,18
+415,Landsmeer,Noord-Holland,6
+416,Langedijk,Noord-Holland,12
+1621,Lansingerland,Zuid-Holland,24
+417,Laren,Noord-Holland,3
+80,Leeuwarden,Friesland,10
+546,Leiden,Zuid-Holland,20
+547,Leiderdorp,Zuid-Holland,2
+1916,Leidschendam-Voorburg,Zuid-Holland,13
+995,Lelystad,Flevoland,24
+1640,Leudal,Limburg,26
+327,Leusden,Utrecht,9
+1705,Lingewaard,Gelderland,11
+553,Lisse,Zuid-Holland,1
+262,Lochem,Gelderland,2
+809,Loon op Zand,Noord-Brabant,20
+331,Lopik,Utrecht,10
+24,Loppersum,Groningen,0
+168,Losser,Overijssel,1
+263,Maasdriel,Gelderland,3
+1641,Maasgouw,Limburg,9
+556,Maassluis,Zuid-Holland,7
+935,Maastricht,Limburg,94
+420,Medemblik,Noord-Holland,4
+938,Meerssen,Limburg,8
+1948,Meierijstad,Noord-Brabant,139
+119,Meppel,Drenthe,3
+687,Middelburg,Zeeland,6
+1842,Midden-Delfland,Zuid-Holland,2
+1731,Midden-Drenthe,Drenthe,1
+1952,Midden-Groningen,Groningen,2
+815,Mill en Sint Hubert,Noord-Brabant,5
+1709,Moerdijk,Noord-Brabant,4
+1978,Molenlanden,Zuid-Holland,13
+1955,Montferland,Gelderland,3
+335,Montfoort,Utrecht,3
+944,Mook en Middelaar,Limburg,5
+1740,Neder-Betuwe,Gelderland,11
+946,Nederweert,Limburg,11
+356,Nieuwegein,Utrecht,11
+569,Nieuwkoop,Zuid-Holland,4
+267,Nijkerk,Gelderland,8
+268,Nijmegen,Gelderland,93
+1930,Nissewaard,Zuid-Holland,17
+1970,Noardeast-Fryslân,Friesland,3
+1695,Noord-Beveland,Zeeland,1
+1699,Noordenveld,Drenthe,1
+171,Noordoostpolder,Flevoland,4
+575,Noordwijk,Zuid-Holland,6
+820,"Nuenen, Gerwen en Nederwetten",Noord-Brabant,4
+302,Nunspeet,Gelderland,22
+579,Oegstgeest,Zuid-Holland,8
+823,Oirschot,Noord-Brabant,4
+824,Oisterwijk,Noord-Brabant,16
+1895,Oldambt,Groningen,0
+269,Oldebroek,Gelderland,8
+173,Oldenzaal,Overijssel,8
+1773,Olst-Wijhe,Overijssel,4
+175,Ommen,Overijssel,6
+1586,Oost Gelre,Gelderland,6
+826,Oosterhout,Noord-Brabant,23
+85,Ooststellingwerf,Friesland,0
+431,Oostzaan,Noord-Holland,5
+432,Opmeer,Noord-Holland,0
+86,Opsterland,Friesland,3
+828,Oss,Noord-Brabant,73
+1509,Oude IJsselstreek,Gelderland,4
+437,Ouder-Amstel,Noord-Holland,7
+589,Oudewater,Utrecht,7
+1734,Overbetuwe,Gelderland,33
+590,Papendrecht,Zuid-Holland,5
+1894,Peel en Maas,Limburg,79
+765,Pekela,Groningen,2
+1926,Pijnacker-Nootdorp,Zuid-Holland,14
+439,Purmerend,Noord-Holland,23
+273,Putten,Gelderland,3
+177,Raalte,Overijssel,6
+703,Reimerswaal,Zeeland,6
+274,Renkum,Gelderland,11
+339,Renswoude,Utrecht,0
+1667,Reusel-De Mierden,Noord-Brabant,1
+275,Rheden,Gelderland,15
+340,Rhenen,Utrecht,1
+597,Ridderkerk,Zuid-Holland,7
+1742,Rijssen-Holten,Overijssel,4
+603,Rijswijk,Zuid-Holland,8
+1669,Roerdalen,Limburg,10
+957,Roermond,Limburg,26
+1674,Roosendaal,Noord-Brabant,18
+599,Rotterdam,Zuid-Holland,163
+277,Rozendaal,Gelderland,2
+840,Rucphen,Noord-Brabant,6
+441,Schagen,Noord-Holland,10
+279,Scherpenzeel,Gelderland,2
+606,Schiedam,Zuid-Holland,10
+88,Schiermonnikoog,Friesland,0
+1676,Schouwen-Duiveland,Zeeland,3
+965,Simpelveld,Limburg,7
+1702,Sint Anthonis,Noord-Brabant,13
+845,Sint-Michielsgestel,Noord-Brabant,17
+1883,Sittard-Geleen,Limburg,84
+610,Sliedrecht,Zuid-Holland,4
+1714,Sluis,Zeeland,5
+90,Smallingerland,Friesland,3
+342,Soest,Utrecht,20
+847,Someren,Noord-Brabant,7
+848,Son en Breugel,Noord-Brabant,13
+37,Stadskanaal,Groningen,0
+180,Staphorst,Overijssel,4
+532,Stede Broec,Noord-Holland,9
+851,Steenbergen,Noord-Brabant,9
+1708,Steenwijkerland,Overijssel,5
+971,Stein,Limburg,24
+1904,Stichtse Vecht,Utrecht,16
+1900,Súdwest-Fryslân,Friesland,6
+715,Terneuzen,Zeeland,6
+93,Terschelling,Friesland,0
+448,Texel,Noord-Holland,3
+1525,Teylingen,Zuid-Holland,7
+716,Tholen,Zeeland,11
+281,Tiel,Gelderland,8
+855,Tilburg,Noord-Brabant,211
+183,Tubbergen,Overijssel,4
+1700,Twenterand,Overijssel,3
+1730,Tynaarlo,Drenthe,10
+737,Tytsjerksteradiel,Friesland,1
+856,Uden,Noord-Brabant,92
+450,Uitgeest,Noord-Holland,4
+451,Uithoorn,Noord-Holland,4
+184,Urk,Flevoland,7
+344,Utrecht,Utrecht,160
+1581,Utrechtse Heuvelrug,Utrecht,14
+981,Vaals,Limburg,3
+994,Valkenburg aan de Geul,Limburg,8
+858,Valkenswaard,Noord-Brabant,8
+47,Veendam,Groningen,0
+345,Veenendaal,Utrecht,6
+717,Veere,Zeeland,6
+861,Veldhoven,Noord-Brabant,14
+453,Velsen,Noord-Holland,15
+983,Venlo,Limburg,40
+984,Venray,Limburg,13
+1961,Vijfheerenlanden,Utrecht,18
+622,Vlaardingen,Zuid-Holland,18
+96,Vlieland,Friesland,0
+718,Vlissingen,Zeeland,8
+986,Voerendaal,Limburg,5
+626,Voorschoten,Zuid-Holland,3
+285,Voorst,Gelderland,3
+865,Vught,Noord-Brabant,19
+1949,Waadhoeke,Friesland,0
+866,Waalre,Noord-Brabant,3
+867,Waalwijk,Noord-Brabant,29
+627,Waddinxveen,Zuid-Holland,4
+289,Wageningen,Gelderland,3
+629,Wassenaar,Zuid-Holland,5
+852,Waterland,Noord-Holland,10
+988,Weert,Limburg,17
+457,Weesp,Noord-Holland,2
+1960,West Betuwe,Gelderland,17
+668,West Maas en Waal,Gelderland,8
+1969,Westerkwartier,Groningen,8
+1701,Westerveld,Drenthe,2
+293,Westervoort,Gelderland,2
+1950,Westerwolde,Groningen,0
+1783,Westland,Zuid-Holland,25
+98,Weststellingwerf,Friesland,1
+614,Westvoorne,Zuid-Holland,8
+189,Wierden,Overijssel,0
+296,Wijchen,Gelderland,23
+1696,Wijdemeren,Noord-Holland,1
+352,Wijk bij Duurstede,Utrecht,6
+294,Winterswijk,Gelderland,2
+873,Woensdrecht,Noord-Brabant,4
+632,Woerden,Utrecht,19
+880,Wormerland,Noord-Holland,2
+351,Woudenberg,Utrecht,4
+479,Zaanstad,Noord-Holland,20
+297,Zaltbommel,Gelderland,7
+473,Zandvoort,Noord-Holland,6
+50,Zeewolde,Flevoland,4
+355,Zeist,Utrecht,20
+299,Zevenaar,Gelderland,10
+637,Zoetermeer,Zuid-Holland,8
+638,Zoeterwoude,Zuid-Holland,1
+1892,Zuidplas,Zuid-Holland,3
+879,Zundert,Noord-Brabant,11
+301,Zutphen,Gelderland,6
+1896,Zwartewaterland,Overijssel,22
+642,Zwijndrecht,Zuid-Holland,8
+193,Zwolle,Overijssel,40
+,SUM,SUM,5459
