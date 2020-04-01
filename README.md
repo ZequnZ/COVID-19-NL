@@ -14,9 +14,9 @@ The direct link to download the csv:
 
 ## Visualizations
 
-![Number of infected in different provinces](./imgs/num_all_province.png)
-![Number of infected(less than 200) in different provinces](./imgs/num_sub_province.png)
-![Top 10 number of infected cities](./imgs/num_top_cities.png)
+![Number of infected in different provinces](./imgs/num_all_province_0330.png)
+![Number of infected(less than 200) in different provinces](./imgs/num_sub_province_0330.png)
+![Top 10 number of infected cities](./imgs/num_top_cities_0330.png)
 
 ## Docker supported
 
