@@ -172,7 +172,7 @@ def gen_c_graphs(df_path, top=10):
     """
     df = viz_preprocessing(df_path)
     c = df.iloc[-1, 1:]
-    cols = list(c.sort_values(ascending=False).index)[1 : 1 + top]
+    cols = list(c.sort_values(ascending=False).index)[1:1 + top]
     colors = sns.color_palette("bright", len(cols))
     plt.figure(figsize=(16, 9))
     for i, c in enumerate(cols):

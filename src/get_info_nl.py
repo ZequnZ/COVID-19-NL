@@ -3,6 +3,7 @@
 import re
 import pandas as pd
 import numpy as np
+import json
 from io import StringIO
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
@@ -283,3 +284,32 @@ def save_info_nl_v3(csv_str, csv_update_date):
 
     # Save the csv
     info_df.to_csv(f"./data/NL_{csv_update_date}.csv", index=False)
+
+
+def get_coronavirus_info_nl_v4(info_link):
+    """
+    Get the coronavirus information from RIVM website version 3
+    Due to the fact that the info page is updated
+    @return:
+    csv_str: str, The csv info string
+    """
+
+    coronavirus_info_page = urlopen(info_link).read().decode("utf-8")
+    soup_pattern = soup(coronavirus_info_page, features="lxml")
+
+    date_link = soup_pattern.find("div", {"id": "mapTitles"}).string
+    decoder = json.JSONDecoder()
+    date_string = decoder.decode(s=date_link)
+    date_string = date_string["nl"]["mapSubtitle"]
+    #     print(date_string)
+
+    time_info = date_string.split(" ")[-1]
+    day, month, year = time_info.split("-")
+    month = month if len(month) != 1 else "0" + month
+    csv_update_date = year + month + day
+
+    csv_info_class = soup_pattern.find("div", {"id": "csvData"})
+    csv_str = csv_info_class.string
+    print(f"csv update date:{csv_update_date}")
+
+    return csv_str, csv_update_date
