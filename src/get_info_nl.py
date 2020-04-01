@@ -306,6 +306,7 @@ def get_coronavirus_info_nl_v4(info_link):
     time_info = date_string.split(" ")[-1]
     day, month, year = time_info.split("-")
     month = month if len(month) != 1 else "0" + month
+    day = day if len(day) != 1 else "0" + day
     csv_update_date = year + month + day
 
     csv_info_class = soup_pattern.find("div", {"id": "csvData"})
